@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<title>cm to Meters Length Converter</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+box-sizing: border-box;
+
+}
+body{
+background-color:azure ;
+margin:auto;
+}
+  h2 ,.p2{
+text-align: center;
+margin-top:40px;
+color:salmon;
+
+  }
+.p2{
+margin-top: 40px;
+text-transform: uppercase;
+font-family:'Trebuchet MS';
+}
+.p3,.p4{
+  margin:30px auto 40px auto;
+}
+input{
+  padding: 12px 15px;
+background-color: antiquewhite;
+border:2px solid green;
+border-radius: 20px;
+  }
+  .p4,label{
+font-size: large;
+color:green;
+  }
+.style{
+border:3px solid pink;
+margin:auto;
+width: 70%;
+margin-top: 20px;
+background:#55b4b0 ;
+border-radius: 20px;
+}
+
+</style>
+<body>
+
+<h2>Length Converter</h2>
+<p class="p2">Type a value in the Feet field to convert the value to Meter:</p>
+<div class="style">
+<p class="p3">
+  <label>CM</label>
+  <input id="inputFeet" type="number" placeholder="cm" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p class="p4">Meter(m): <span id="outputMeters"></span></p>
+</div>
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum*100;
+}
+</script>
+</body>
+</html>
